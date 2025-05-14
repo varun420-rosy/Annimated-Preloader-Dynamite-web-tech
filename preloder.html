@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-1 Dymanite webtech</title>
+    <style>
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.5s ease-in-out;
+        }
+        
+        .preloader video {
+            width: 100px;
+            height: 100px;
+        }
+        
+        .content {
+            display: none;
+        }
+        
+        .preloader.fade-out {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="preloader">
+        <video width="100px" height="100px" autoplay loop>
+            <source src="preloader.gif.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="content">
+        <p>
+            <h2>Problem statement</h2>
+            <h1>Animated Preloader</h1>
+            Create a gif image animated Preloader in a website. Description :- Create a gif image animated Preloader in a website that trigger when user visit a website preloader is typically used to display an animation (like a spinner, progress bar, or custom animation) while the page's content loads. It improves user experience by preventing users from seeing unstyled or incomplete content.
+        </p>
+    </div>
+    <script>
+        window.addEventListener('load', function() {
+            const preloader = document.querySelector('.preloader');
+            const content = document.querySelector('.content');
+            preloader.classList.add('fade-out');
+            setTimeout(() => {
+                preloader.style.display = 'none';
+                content.style.display = 'block';
+            }, 500);
+        });
+    </script>
+</body>
+</html>
+ 
